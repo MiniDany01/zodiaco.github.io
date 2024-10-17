@@ -1,0 +1,108 @@
+:root {
+    --color-background: #212121;
+    --backgroud-input: #2f2f2f;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url("https://i.pinimg.com/enabled/564x/4b/c9/8c/4bc98cb72e52d07e55f2f0ab03a1a8c1.jpg");
+    /* background-color: var(--color-background); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    border: 1px solid white;
+    padding: 75px;
+    border-radius: 10px;
+    backdrop-filter: blur(1px);
+    transition: all 0.5s ease-in-out;
+}
+
+.contenedor:hover {
+    transform: scale(1.02);
+}
+
+.txt-signo {
+    color: white;
+    font-size: 40px;
+}
+
+.input-signo {
+    text-align: center;
+    color: white;
+    width: 400px;
+    height: 15px;
+    border-radius: 20px;
+    padding: 10px;
+    /* border: none; */
+    outline: none;
+    background-color: transparent;
+    border-color: white;
+    margin-top: 20px; /* Espacio entre el texto y el input */
+    font-size: 20px;
+}
+
+.input-signo:hover {
+    border: 3px solid;
+}
+
+::placeholder {
+    font-size: 20px;
+}
+
+.send {
+    position: sticky;
+    bottom: 45.4%;
+    left: 61.6%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* background-color: #c9c3c0; */
+    border-radius: 50%;
+}
+
+.send:hover {
+    border-radius: 50%;
+    background-color: #67676780;
+    transform: scale(1.2);
+}
+
+.suscribe {
+    position: absolute;
+    top: 10px;   /* Espacio desde la parte superior */
+    right: 10px; /* Espacio desde la derecha */
+    display: flex;
+    gap: 10px; /* Espacio entre el input y el botón */
+}
+
+.suscribe input[type="email"] {
+    width: 200px;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--backgroud-input);
+    color: white;
+    text-align: center;
+}
+
+.suscribe button {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suscribe button:hover {
+    background-color: #777;
+}

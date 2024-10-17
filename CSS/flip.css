@@ -1,0 +1,82 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/564x/4b/c9/8c/4bc98cb72e52d07e55f2f0ab03a1a8c1.jpg");
+}
+
+.container {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 500px;
+    height: 500px;
+    perspective: 1000px; /* Necesario para la rotación 3D */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.front {
+    font-size: 20px;
+    top: 0;
+    background-color: #ecbba2;
+    color: white;
+}
+
+.back {
+    background-color:#9750bd ;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+.info {
+    content: "";
+}
+
+.img {
+    object-fit: cover;
+    width: 500px;
+    height: 500px; 
+    border-radius: 8px;   
+}
+
+.atras {
+    width: 50px;
+    position: absolute;
+    top: 10px;  /* Ajusta el valor según el espacio que quieras */
+    left: 10px; /* Ajusta el valor según el espacio que quieras */
+    transition: all 0.3s ease-in-out;
+}
+
+.atras:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
